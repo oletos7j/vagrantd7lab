@@ -10,6 +10,7 @@ Vagrant.configure("2") do |config|
 
 
     config.vm.provider :virtualbox do |v|
+        v.name = " Trusty64"
         v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         v.customize ["modifyvm", :id, "--memory", 2048]
     end
